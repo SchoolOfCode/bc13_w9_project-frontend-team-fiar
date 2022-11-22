@@ -1,11 +1,26 @@
 import React from "react";
 import "./App.css";
+import {useState}
+import { NavigationArrows } from "../navigation arrows";
+// For navbar
+// import all of the route handlers "week 1 to 16"
+// within function app return the navbar and the routes nested within the header
+// 
+
 
 function App() {
+  async function PreviousWeek (){
+
+  }
+
+ async function NextWeek () {
+
+  }
+
   return (
     <main>
       <title>FIAR APP</title>
-      <Header />
+      <Header PreviousWeek = {PreviousWeek} NextWeek = {NextWeek} />
 
       <Sidebar />
 
