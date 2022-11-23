@@ -5,10 +5,11 @@ import CommentSection from "../comment section";
 import PostsSection from "../post section";
 
 function MainSection({ posts, comments }) {
+  function handleSubmit() {}
   return (
-    <div className='main-section'>
-      <PostsSection posts={posts} comments={comments}/>
-      <CommentSection/>
+    <div className="main-section">
+      <PostsSection posts={posts} comments={comments} />
+      <CommentSection handleSubmit={handleSubmit} />
     </div>
   );
 }

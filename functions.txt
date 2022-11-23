@@ -1,31 +1,24 @@
-navigation arrows
+App.js
+- second URL call for the comments based on id of displayed post 
+- hand down comments and posts array to main section
+-link URL to the different buttons
 
-previousWeek and Next week("button clicked"){
-count = current week we can see
-previous week button = id -1
-next week button = id + 1
-
-if done by date:
-date + 7
-
-    const data = await fetch "get post and comments for week(previous/next button id)"
-    
-    return data
-}
-
-different days button (){
-
-}
+MainSection
+- write function that displays the comments from the database
+- write function that displays the posts from the database
+- write handle sumbit function ( adds comments from bootcampers, adds to comment section, adds comment to array via post request)
 
 
-comments section
-- allowing an input field so comment can be added
-- submit button which posts data in input field into comment section
+CSS
+- style the page to make it look like website made in figma
 
-morning/afternoon buttons
-- switch between boolean
-- morning = true
-- afternoon = false
 
-different days
-- changing between the different days in that specific week
+Testing
+-E2E testing
+
+Sretch Goals
+- add name of week in the title
+
+- Title Deleted
+
+
