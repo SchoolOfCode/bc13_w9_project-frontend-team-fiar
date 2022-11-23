@@ -1,10 +1,18 @@
+import { useState } from "react";
 
-function CommentSection() {
+function CommentSection(props) {
+const[userInput, setUserInput] = useState("")
+ function handleChange(e){
+setUserInput(e.target.value)
+console.log(userInput)
+ }
+
+
     return (
       <div>
-        <input type="text">
+        <input type="text" onChange={handleChange}>
         </input>
-          <button> Submit</button>
+          <button onClick={props.handleSubmit}> Submit</button>
       </div>
     );
   }

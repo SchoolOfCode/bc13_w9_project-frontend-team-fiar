@@ -4,10 +4,12 @@ import "./index.css";
 //import CommentsSection from "../comment section";
 //import PostsSection from "../post section"
 import CommentSection from "../comment section";
+import PostsSection from "../post section";
 
 function MainSection() {
   return (
     <div>
+      <PostsSection />
       <CommentSection />
     </div>
   );

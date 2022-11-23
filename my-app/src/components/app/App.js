@@ -11,7 +11,7 @@ import MainSection from "../main-section";
 //
 
 function App() {
- //handleclick
+  //handleclick
 
   return (
     <main>
@@ -23,7 +23,7 @@ function App() {
       <MainSection />
     </main>
   );
-  }
+}
 
 export default App;
 //inside header
