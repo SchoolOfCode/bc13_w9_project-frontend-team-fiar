@@ -11,6 +11,8 @@ export function NavigationArrows({ props }) {
   const initialState = 1;
 
   const [count, dispatch] = useReducer(reducer, initialState);
+  //
+  // write fetch requests in the format "http://localhost:3000/api/posts/?week{id}/"day""
   function reducer(state, action) {
     switch (action.type) {
       case "increment":
