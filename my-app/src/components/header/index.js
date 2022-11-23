@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import "./index.css";
 import { NavigationArrows } from "../navigation arrows";
 import Dropdown from "../dropdown";
