@@ -2,7 +2,7 @@
 
 function PostsSection() {
   return (
-    <div>
+    <div className='post-section'>
       <div className="Posts">
         <p>post are here</p>
       </div>

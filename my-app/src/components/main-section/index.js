@@ -1,21 +1,16 @@
 //import { useState, useEffect } from "react";
 import "./index.css";
 //import MorningAfternoonButton from "../morning and afternoon buttons";
-//import CommentsSection from "../comment section";
-//import PostsSection from "../post section"
 import CommentSection from "../comment section";
 import PostsSection from "../post section";
 
-function MainSection() {
+function MainSection({ posts, comments }) {
   return (
-    <div>
-      <PostsSection />
-      <CommentSection />
+    <div className='main-section'>
+      <PostsSection posts={posts} comments={comments}/>
+      <CommentSection/>
     </div>
   );
 }
-//   <CommentsSection />
-//<PostsSection />
-//<MorningAfternoonButton />
 
 export default MainSection;

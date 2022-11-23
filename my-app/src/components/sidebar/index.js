@@ -3,7 +3,7 @@ import "./index.css";
 import DifferentDays from "../different days"
 function Sidebar() {
   return (
-    <div>
+    <div className='sidebar'>
       <DifferentDays />
     </div>
   );

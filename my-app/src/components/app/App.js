@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-//import { useState } from "react";
+import { useState, useEffect, useReducer } from "react";
 //import NavigationArrows from "../navigation arrows";
 import Header from "../header";
 import Sidebar from "../sidebar";
@@ -11,17 +11,51 @@ import MainSection from "../main-section";
 //
 
 function App() {
-  //handleclick
+  const initialState = 1;
+  const [count, dispatch] = useReducer(reducer, initialState);
+  const [posts, setPosts] = useState([])
+  const [comments, setComments] = useState([])
+  console.log(count)
+  
+  useEffect(() => {
+    async function callURL() {
+      const response = await fetch(`http://localhost:3050/api/posts/?week=${count}`);
+      const data = await response.json();
+      setPosts([data.payload[0].contents]);
+      console.log('Posts', data.payload[0].contents
+      );
+    }
+    callURL();
+  }, [count]);
+
+
+  function reducer(state, action) {
+    switch (action.type) {
+      case "increment":
+        return state + 1;
+      case "decrement":
+        if (state <= 1) {
+          return initialState;
+        } else {
+          return state - 1;
+        }
+      default:
+        return state;
+    }
+  }
 
   return (
-    <main>
+    <div className='App'>
       <title>FIAR APP</title>
-      <Header /*PreviousWeek={PreviousWeek} NextWeek={NextWeek}*/ />
+      <Header count={count} dispatch={dispatch} />
 
-      <Sidebar />
-
-      <MainSection />
-    </main>
+      <div className='sidebar-main'>
+        <Sidebar />
+        <MainSection posts={posts} comments={comments}/>
+        <p>{posts}</p>
+      </div>
+      
+    </div>
   );
 }
 

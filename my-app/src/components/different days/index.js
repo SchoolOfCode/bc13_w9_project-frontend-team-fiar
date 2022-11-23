@@ -9,7 +9,7 @@ export function DifferentDays() {
     //reference SQL table to fetch (get) data from - posts table and comments (join) table
   //}
   return (
-    <div>
+    <div className='day-buttons'>
       <button>Monday</button>
       <button>Tuesday</button>
       <button>Wednesday</button>

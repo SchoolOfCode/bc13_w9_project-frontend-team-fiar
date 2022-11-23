@@ -1,36 +1,19 @@
 import { useState, useEffect, useReducer } from "react";
 import "./index.css";
 
-export function NavigationArrows({ props }) {
+export function NavigationArrows({ dispatch }) {
   //function
   //get week id
   //change week by +1 or -1
   //set state to new week Id
   // render page with new url (changed weekId)
   //const[weekId, setWeekId] =useState(count)
-  const initialState = 1;
-
-  const [count, dispatch] = useReducer(reducer, initialState);
-  function reducer(state, action) {
-    switch (action.type) {
-      case "increment":
-        return state + 1;
-      case "decrement":
-        if (state <= 1) {
-          return initialState;
-        } else {
-          return state - 1;
-        }
-      default:
-        return state;
-    }
-  }
+  // const initialState = 1;
 
   return (
     <div>
       <button onClick={() => dispatch({ type: "decrement" })}>Previous </button>
       <button onClick={() => dispatch({ type: "increment" })}> Next</button>
-      <p>{count}</p>
     </div>
   );
 }
