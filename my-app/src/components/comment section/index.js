@@ -1,20 +1,23 @@
 import { useState } from "react";
 
-function CommentSection({handleSubmit}) {
-const[userInput, setUserInput] = useState("")
- function handleChange(e){
-setUserInput(e.target.value)
-console.log(userInput)
- }
-
-
-    return (
-      <div>
-        <input type="text" onChange={handleChange}>
-        </input>
-          <button onClick={()=>handleSubmit(userInput)}> Submit</button>
-      </div>
-    );
+function CommentSection({ handleSubmit }) {
+  const [userInput, setUserInput] = useState("");
+  function handleChange(e) {
+    setUserInput(e.target.value);
+    console.log(userInput);
   }
-  
-  export default CommentSection;
+
+  function handleClick() {
+    handleSubmit(userInput);
+    setUserInput(" ");
+  }
+
+  return (
+    <div>
+      <input type="text" onChange={handleChange} value={userInput}></input>
+      <button onClick={handleClick}> Submit</button>
+    </div>
+  );
+}
+
+export default CommentSection;

@@ -4,10 +4,19 @@ import "./index.css";
 import CommentSection from "../comment section";
 import PostsSection from "../post section";
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function MainSection({ posts }) {
   const [commentsArr, setCommmentsArr] = useState([]);
-  function handleSubmit() {}
+  function handleSubmit(userInput) {
+    const newComment = {
+      username: "isaac",
+      comment_id: uuidv4(),
+      contents: userInput,
+    };
+    setCommmentsArr([...commentsArr, newComment]);
+    console.log(newComment);
+  }
 
   console.log("post id", posts[0].post_id);
   useEffect(() => {
@@ -17,7 +26,7 @@ function MainSection({ posts }) {
       );
       const data = await response.json();
       setCommmentsArr([...data.payload]);
-      console.log("data",data.payload)
+      console.log("data", data.payload);
     }
     callURL();
   }, [posts[0].post_id]);
