@@ -1,16 +1,19 @@
 //import { useState, useEffect } from "react";
+import Comments from "../comments";
 
-function PostsSection({posts}) {
-  console.log('post section')
-  console.log(posts)
+function PostsSection({ posts, commentsArr }) {
   return (
-    <div className='post-section'>
+    <div className="post-section">
       <div className="Posts">
-        <p>{posts[0]?.username}, {posts[0]?.contents}</p>
+        <p>
+          {posts[0]?.username}, {posts[0]?.contents}
+        </p>
       </div>
 
       <div className="Comments">
-        <p>comments are here</p>
+        {commentsArr.map((item) => {
+          return <Comments comment={item} />;
+        })}
       </div>
     </div>
   );

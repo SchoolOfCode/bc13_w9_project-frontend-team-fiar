@@ -18,15 +18,12 @@ function App() {
   const [singlePost, setSinglePost] = useState(null);
 
   useEffect(() => {
-    console.log(count);
     async function callURL() {
       const response = await fetch(
         `http://localhost:3050/api/posts/?week=${count}`
       );
       const data = await response.json();
       setFetchData([...data.payload]);
-      console.log(data);
-      console.log("Fetch", data.payload[0].contents);
     }
     callURL();
   }, [count]);
@@ -51,7 +48,7 @@ function App() {
       const filteredPosts = fetchData.filter((item) => {
         return item?.day_posted === "mon";
       });
-      console.log(filteredPosts);
+
       setPosts(filteredPosts);
       setSinglePost(filteredPosts);
     }
@@ -93,14 +90,13 @@ function App() {
       setSinglePost(filteredPosts);
     }
     if (morning === false) {
-      console.log("afternoon");
       const filteredPosts = posts.filter((posts) => {
         return posts?.morning === false;
       });
       setSinglePost(filteredPosts);
     }
   }
-  console.log(singlePost);
+
 
   return (
     <div className="App">
