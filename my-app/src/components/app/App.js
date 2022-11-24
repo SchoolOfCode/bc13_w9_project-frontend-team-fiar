@@ -18,14 +18,14 @@ function App() {
   const [singlePost, setSinglePost] = useState(null);
 
   useEffect(() => {
-    console.log(count)
+    console.log(count);
     async function callURL() {
       const response = await fetch(
-        `http://localhost:3050/api/posts/?week=${count}` 
+        `http://localhost:3050/api/posts/?week=${count}`
       );
       const data = await response.json();
       setFetchData([...data.payload]);
-      console.log(data)
+      console.log(data);
       console.log("Fetch", data.payload[0].contents);
     }
     callURL();
@@ -49,36 +49,36 @@ function App() {
   function handleDay(day) {
     if (day === "mon") {
       const filteredPosts = fetchData.filter((item) => {
-        return item.day_posted === "mon";
+        return item?.day_posted === "mon";
       });
-      console.log(filteredPosts)
+      console.log(filteredPosts);
       setPosts(filteredPosts);
       setSinglePost(filteredPosts);
     }
     if (day === "tue") {
       const filteredPosts = fetchData.filter((posts) => {
-        return posts.day_posted === "tue";
+        return posts?.day_posted === "tue" || posts?.day_posted === "tues";
       });
       setPosts(filteredPosts);
       setSinglePost(filteredPosts);
     }
     if (day === "wed") {
       const filteredPosts = fetchData.filter((posts) => {
-        return posts.day_posted === "wed";
+        return posts?.day_posted === "wed";
       });
       setPosts(filteredPosts);
       setSinglePost(filteredPosts);
     }
     if (day === "thu") {
       const filteredPosts = fetchData.filter((posts) => {
-        return posts.day_posted === "thu";
+        return posts?.day_posted === "thu";
       });
       setPosts(filteredPosts);
       setSinglePost(filteredPosts);
     }
     if (day === "fri") {
       const filteredPosts = fetchData.filter((posts) => {
-        return posts.day_posted === "fri";
+        return posts?.day_posted === "fri";
       });
       setPosts(filteredPosts);
       setSinglePost(filteredPosts);
@@ -88,19 +88,19 @@ function App() {
   function handleTime(morning) {
     if (morning === true) {
       const filteredPosts = posts.filter((posts) => {
-        return posts.morning === true;
+        return posts?.morning === true;
       });
       setSinglePost(filteredPosts);
     }
     if (morning === false) {
-      console.log("afternoon")
+      console.log("afternoon");
       const filteredPosts = posts.filter((posts) => {
-        return posts.morning === false;
+        return posts?.morning === false;
       });
       setSinglePost(filteredPosts);
     }
   }
-  console.log(singlePost)
+  console.log(singlePost);
 
   return (
     <div className="App">
@@ -108,8 +108,12 @@ function App() {
       <Header count={count} dispatch={dispatch} />
 
       <div className="sidebar-main">
-        <Sidebar handleDay={handleDay} handleTime={handleTime}/>
-       {singlePost == null ?  <p>Couldn't find any posts</p> : <MainSection posts={singlePost}/>}
+        <Sidebar handleDay={handleDay} handleTime={handleTime} />
+        {singlePost == null ? (
+          <p>Couldn't find any posts</p>
+        ) : (
+          <MainSection posts={singlePost} />
+        )}
       </div>
     </div>
   );

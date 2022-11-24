@@ -6,7 +6,7 @@ function PostsSection({posts}) {
   return (
     <div className='post-section'>
       <div className="Posts">
-        <p>{posts[0].username}: {posts[0].contents}</p>
+        <p>{posts[0]?.username}, {posts[0]?.contents}</p>
       </div>
 
       <div className="Comments">
