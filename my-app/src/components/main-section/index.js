@@ -8,13 +8,14 @@ import { v4 as uuidv4 } from "uuid";
 
 function MainSection({ posts }) {
   const [commentsArr, setCommmentsArr] = useState([]);
-  function handleSubmit(userInput) {
+  function handleSubmit(userInput, enterUserName) {
     const newComment = {
-      username: "isaac",
+      username: enterUserName,
       comment_id: uuidv4(),
       contents: userInput,
     };
     setCommmentsArr([...commentsArr, newComment]);
+    console.log("this is the comments array", commentsArr);
     console.log(newComment);
   }
 
