@@ -1,10 +1,12 @@
 //import { useState, useEffect } from "react";
 
-function PostsSection() {
+function PostsSection({posts}) {
+  console.log('post section')
+  console.log(posts)
   return (
     <div className='post-section'>
       <div className="Posts">
-        <p>post are here</p>
+        <p>{posts[0].username}: {posts[0].contents}</p>
       </div>
 
       <div className="Comments">

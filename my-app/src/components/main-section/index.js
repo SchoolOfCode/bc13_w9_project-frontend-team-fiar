@@ -4,11 +4,11 @@ import "./index.css";
 import CommentSection from "../comment section";
 import PostsSection from "../post section";
 
-function MainSection({ posts, comments }) {
+function MainSection({ posts }) {
   function handleSubmit() {}
   return (
     <div className="main-section">
-      <PostsSection posts={posts} comments={comments} />
+      <PostsSection posts={posts} />
       <CommentSection handleSubmit={handleSubmit} />
     </div>
   );
