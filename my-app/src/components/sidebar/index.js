@@ -5,11 +5,21 @@ function Sidebar({ handleDay, handleTime }) {
   return (
     <div className="day-buttons">
       <MorningAfternoonButtons handleTime={handleTime} />
-      <button onClick={() => handleDay("mon")}>Monday</button>
-      <button onClick={() => handleDay("tue")}>Tuesday</button>
-      <button onClick={() => handleDay("wed")}>Wednesday</button>
-      <button onClick={() => handleDay("thu")}>Thursday</button>
-      <button onClick={() => handleDay("fri")}>Friday</button>
+      <button className="buttonday" onClick={() => handleDay("mon")}>
+        Monday
+      </button>
+      <button className="buttonday" onClick={() => handleDay("tue")}>
+        Tuesday
+      </button>
+      <button className="buttonday" onClick={() => handleDay("wed")}>
+        Wednesday
+      </button>
+      <button className="buttonday" onClick={() => handleDay("thu")}>
+        Thursday
+      </button>
+      <button className="buttonday" onClick={() => handleDay("fri")}>
+        Friday
+      </button>
     </div>
   );
 }

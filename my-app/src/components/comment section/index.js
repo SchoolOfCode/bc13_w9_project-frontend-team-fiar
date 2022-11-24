@@ -17,13 +17,14 @@ function CommentSection({ handleSubmit }) {
   }
 
   return (
-    <div>
+    <div className="inputs">
       <input
         type="text"
         placeholder="Username here"
         onChange={handleUserNameChange}
       ></input>
       <input
+        className="commentplease"
         type="text"
         placeholder="comment here"
         onChange={handleChange}
