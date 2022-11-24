@@ -30,7 +30,7 @@ function CommentSection({ handleSubmit }) {
         onChange={handleChange}
         value={userInput}
       ></input>
-      <button onClick={handleClick}> Submit</button>
+      <button className='submitButton' onClick={handleClick}> Submit</button>
     </div>
   );
 }

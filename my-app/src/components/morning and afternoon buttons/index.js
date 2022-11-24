@@ -2,9 +2,9 @@ import React from "react";
 
 function MorningAfternoonButtons({ handleTime }) {
   return (
-    <div>
-      <button onClick={() => handleTime(true)}>Morning</button>
-      <button onClick={() => handleTime(false)}>Afternoon</button>
+    <div className='morningAfternoonButtons'>
+      <button className='navButton' id='morning-afternoon' onClick={() => handleTime(true)}>Morning</button>
+      <button className='navButton' id='morning-afternoon' onClick={() => handleTime(false)}>Afternoon</button>
     </div>
   );
 }

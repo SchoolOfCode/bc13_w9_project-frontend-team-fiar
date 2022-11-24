@@ -1,5 +1,4 @@
 .App {
-  background-color: red;
   text-align: center; 
   display: flex;
   flex-direction: column;
@@ -7,23 +6,58 @@
 }
 
 .sidebar-main {
-  background-color: bisque;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 30px;
   padding: 20px;
-  border-radius: 10px
-  ;
+  border-radius: 10px;
 }
 
 .day-buttons {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: ;
+  background-color: #32A9D9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  justify-content: space-between;
 }
 
+.submitButton {
+  background-color: #188262;
+  border: 1px solid #188262;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submitButton:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .submitButton {
+    padding: 10px 30px;
+  }
+}
 
 
 /* CSS */
@@ -91,9 +125,9 @@
 
 
 .Posts {
-  background-color: green;
   max-width: 500px;
   padding-left: 30px;
+  padding-right: 30px;
 }
 .inputs{
   display: flex;
@@ -105,7 +139,23 @@
   height: 100px
 }
 .Comments {
-  background-color: blueviolet;
+  background-color: #c9c8c7;
+  border-radius: 10px;
+  text-align: left;
+  padding: 5px;
+  margin: 10px 10px 10px 10px ;
 }
 
+.userCommentName {
+  font-weight: 600;
+}
 
+#morning-afternoon {
+  width: auto;
+}
+
+.morningAfternoonButtons {
+  background-color: #188262;
+  padding: 10px;
+  border-radius: 10px;
+}
