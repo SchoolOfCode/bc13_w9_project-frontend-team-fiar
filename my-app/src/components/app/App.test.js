@@ -1,4 +1,5 @@
-import { render, screen, userEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event'
 import App from './App';
 
 test('Finds morning button', () => {
@@ -8,7 +9,6 @@ test('Finds morning button', () => {
   expect(morningButton).toBeInTheDocument();
 });
 
-//This test not working - problem using userEvent (click undefined)
 test('Finds Monday button and clicks', async () => {
   render(<App />);
   const mondayButton = screen.getByText(/Monday/i);

@@ -3,6 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+h1{
+  font-family: 'Roboto Mono', monospace;
 }
 
 .sidebar-main {
@@ -34,7 +39,6 @@
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   font-weight: 400;
   outline: none;
@@ -69,7 +73,6 @@
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: Clarkson,Helvetica,sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0;
@@ -159,3 +162,5 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto+Mono:wght@700&display=swap');
