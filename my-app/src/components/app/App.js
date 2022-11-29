@@ -1,14 +1,9 @@
 import React from "react";
 import "./App.css";
 import { useState, useEffect, useReducer } from "react";
-//import NavigationArrows from "../navigation arrows";
 import Header from "../header";
 import Sidebar from "../sidebar";
 import MainSection from "../main-section";
-// For navbar
-// import all of the route handlers "week 1 to 16"
-// within function app return the navbar and the routes nested within the header
-//
 
 function App() {
   const initialState = 1;
@@ -100,7 +95,6 @@ function App() {
 
   return (
     <div className="App">
-      <title>FIAR APP</title>
       <Header count={count} dispatch={dispatch} />
 
       <div className="sidebar-main">

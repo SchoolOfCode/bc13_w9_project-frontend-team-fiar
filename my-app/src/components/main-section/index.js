@@ -17,20 +17,20 @@ function MainSection({ posts }) {
     console.log(newComment);
   }
 
-  console.log("post id", posts[0].post_id);
   useEffect(() => {
+    let postID = posts[0].post_id
     async function callURL() {
       if (posts[0].post_id === undefined) {
         setCommmentsArr(["Couldnt find a post"]);
       }
       const response = await fetch(
-        `http://localhost:3050/api/comments/${posts[0].post_id}`
+        `http://localhost:3050/api/comments/${postID}`
       );
       const data = await response.json();
       setCommmentsArr([...data.payload]);
     }
     callURL();
-  }, [posts[0].post_id]);
+  }, [posts]);
 
   return (
     <div className="main-section">

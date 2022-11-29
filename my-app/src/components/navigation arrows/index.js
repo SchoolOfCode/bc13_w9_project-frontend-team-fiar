@@ -1,4 +1,3 @@
-import { useState, useEffect, useReducer } from "react";
 import "./index.css";
 
 export function NavigationArrows({ dispatch }) {
