@@ -1,7 +1,5 @@
-//import { useState, useEffect } from "react";
 import "./index.css";
-//import MorningAfternoonButton from "../morning and afternoon buttons";
-import CommentSection from "../comment section";
+import CommentInput from "../comment section";
 import PostsSection from "../post section";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -23,7 +21,7 @@ function MainSection({ posts }) {
   useEffect(() => {
     async function callURL() {
       if (posts[0].post_id === undefined) {
-        setCommmentsArr(['Couldnt find a post'])
+        setCommmentsArr(["Couldnt find a post"]);
       }
       const response = await fetch(
         `http://localhost:3050/api/comments/${posts[0].post_id}`
@@ -37,7 +35,7 @@ function MainSection({ posts }) {
   return (
     <div className="main-section">
       <PostsSection posts={posts} commentsArr={commentsArr} />
-      <CommentSection handleSubmit={handleSubmit} />
+      <CommentInput handleSubmit={handleSubmit} />
     </div>
   );
 }

@@ -80,7 +80,7 @@ function App() {
       setSinglePost(filteredPosts);
     }
   }
-  console.log('singlePost', singlePost);
+  console.log("singlePost", singlePost);
 
   function handleTime(morning) {
     if (morning === true) {
@@ -96,8 +96,7 @@ function App() {
       setSinglePost(filteredPosts);
     }
   }
-  console.log('singlePost', singlePost);
-
+  console.log("singlePost", singlePost);
 
   return (
     <div className="App">
@@ -117,24 +116,3 @@ function App() {
 }
 
 export default App;
-//inside header
-// - navigation arrows
-// - dropdown
-
-//inside Sidebar
-// - different days
-
-//main-section
-// - morning/afternoon buttons
-// - post section
-// - comments section
-
-/*
-line 7 = name in the tab
-
-line 8 = header section which includes navigation arrows, dropdown
-
-line 10 = Sidebar which includes the different days
-
-line 12 = main-section which has morning/afternooon buttons, post & comments section
-*/

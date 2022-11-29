@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CommentSection({ handleSubmit }) {
+function CommentInput({ handleSubmit }) {
   const [userInput, setUserInput] = useState("");
   const [enterUserName, setEnterUserName] = useState("");
   function handleChange(e) {
@@ -30,9 +30,12 @@ function CommentSection({ handleSubmit }) {
         onChange={handleChange}
         value={userInput}
       ></input>
-      <button className='submitButton' onClick={handleClick}> Submit</button>
+      <button className="submitButton" onClick={handleClick}>
+        {" "}
+        Submit
+      </button>
     </div>
   );
 }
 
-export default CommentSection;
+export default CommentInput;
