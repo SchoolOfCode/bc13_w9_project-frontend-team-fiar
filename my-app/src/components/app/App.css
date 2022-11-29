@@ -139,7 +139,12 @@ h1{
 .commentplease{
 
   width: auto;
-  height: 100px
+  height: 100px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-indent: 18px;
+
 }
 .Comments {
   background-color: #c9c8c7;
@@ -147,7 +152,11 @@ h1{
   text-align: left;
   padding: 5px;
   margin: 10px 10px 10px 10px ;
+  max-width: 100%;
+
 }
+
+
 
 .userCommentName {
   font-weight: 600;

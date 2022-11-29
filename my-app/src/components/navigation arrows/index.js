@@ -18,3 +18,5 @@ export function NavigationArrows({ dispatch }) {
     </div>
   );
 }
+
+export default NavigationArrows;

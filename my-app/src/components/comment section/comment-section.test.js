@@ -17,3 +17,11 @@ test("pass valid comment to test comment input field", () => {
   userEvent.type(inputUN, "Test comment");
   expect(inputUN).toHaveValue("Test comment");
 });
+
+test("testing for whether jest.fn() is called", () => {
+  const handler = jest.fn();
+  render(<CommentInput handleSubmit={handler} />);
+  const buttonClick = screen.getByRole("button");
+  userEvent.click(buttonClick);
+  expect(handler).toHaveBeenCalled();
+});

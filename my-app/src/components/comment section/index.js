@@ -19,13 +19,15 @@ function CommentInput({ handleSubmit }) {
   return (
     <div className="inputs">
       <input
+        maxLength="10"
         type="text"
         placeholder="Username here"
         onChange={handleUserNameChange}
       ></input>
       <input
+        maxLength="200"
         className="commentplease"
-        type="text"
+        type="textarea"
         placeholder="comment here"
         onChange={handleChange}
         value={userInput}
