@@ -22,12 +22,14 @@ function MainSection({ posts }) {
   console.log("post id", posts[0].post_id);
   useEffect(() => {
     async function callURL() {
+      if (posts[0].post_id === undefined) {
+        setCommmentsArr(['Couldnt find a post'])
+      }
       const response = await fetch(
         `http://localhost:3050/api/comments/${posts[0].post_id}`
       );
       const data = await response.json();
       setCommmentsArr([...data.payload]);
-      console.log("data", data.payload);
     }
     callURL();
   }, [posts[0].post_id]);

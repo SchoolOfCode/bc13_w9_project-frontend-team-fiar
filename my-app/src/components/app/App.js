@@ -48,7 +48,6 @@ function App() {
       const filteredPosts = fetchData.filter((item) => {
         return item?.day_posted === "mon";
       });
-
       setPosts(filteredPosts);
       setSinglePost(filteredPosts);
     }
@@ -81,6 +80,7 @@ function App() {
       setSinglePost(filteredPosts);
     }
   }
+  console.log('singlePost', singlePost);
 
   function handleTime(morning) {
     if (morning === true) {
@@ -96,6 +96,7 @@ function App() {
       setSinglePost(filteredPosts);
     }
   }
+  console.log('singlePost', singlePost);
 
 
   return (
@@ -105,7 +106,7 @@ function App() {
 
       <div className="sidebar-main">
         <Sidebar handleDay={handleDay} handleTime={handleTime} />
-        {singlePost == null ? (
+        {singlePost === null || singlePost.length === 0 ? (
           <p>Couldn't find any posts</p>
         ) : (
           <MainSection posts={singlePost} />
