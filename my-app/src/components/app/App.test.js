@@ -11,7 +11,7 @@ test("Finds morning button", () => {
 
 test("Finds Afternoon button and clicks", async () => {
   render(<App />);
-  const Button = screen.getByText(/Afternoon/i);
+  const Button = screen.getByText(/adsfasdf/i);
   expect(Button).toBeInTheDocument();
   await userEvent.click(Button);
 });
