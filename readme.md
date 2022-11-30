@@ -12,4 +12,5 @@ We wanted to create a resource diary in which is easier to find content, with no
 We created a Full-Stack application using React, JSX, CSS, Node.js, Express, PostgreSQL, and testing coverage using Cypress, Jest and Supertest.
 
 ### More information
+[Back-end repo](https://github.com/SchoolOfCode/bc13_w9_project-backend-team-fiar)
 Check Team FIAR presentation.pdf file for UX/UI designs, the team working structure, Git and GitHub strategies and more. 
